@@ -1,0 +1,150 @@
+/* ===== Global Styles ===== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f8f0;
+  box-sizing: border-box;
+}
+
+/* ===== Container Principal ===== */
+.container-listdonation {
+  width: 80%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+/* ===== Header Section ===== */
+.profile-headerLIST {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.profile-headerLIST h1 {
+  font-size: 40px;
+  color: #228b22;
+  margin: 0;
+}
+
+/* ===== Search Bar ===== */
+.groupsearch {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputsearch {
+  width: 250px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+  padding-left: 40px;
+}
+
+.inputsearch:focus {
+  border-color: #56ab2f;
+  box-shadow: 0px 0px 8px rgba(34, 139, 34, 0.3);
+}
+
+.iconsearch {
+  position: absolute;
+  left: 12px;
+  width: 20px;
+  height: 20px;
+  fill: #228b22;
+}
+
+/* ===== Liste des donations ===== */
+.contentlist {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.contentlist > div {
+  background: transparent;
+  padding: 0px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.donor-profile .projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Grid layout for donation cards on larger screens */
+@media (min-width: 768px) {
+  .donor-profile .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+  .container-listdonation {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-headerLIST {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .inputsearch {
+    width: 100%;
+  }
+
+  .donor-profile .projects {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .donation-card-footer {
+    justify-content: center;
+  }
+
+  .btnseemorelist,
+  .btnseelist {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Style du select avec position à droite */
+.sort-select {
+  width: 20px;
+  padding: 8px 12px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  font-size: 16px;
+  color: #333;
+  appearance: none; /* Supprime le style par défaut du select */
+  cursor: pointer;
+  right: 20px; /* 20px à partir du bord droit */
+  top: 10px; /* 10px à partir du bord supérieur */
+}
+
+/* Style du select au focus */
+.sort-select:focus {
+  border-color: #228b22;
+  outline: none;
+}
+

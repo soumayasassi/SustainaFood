@@ -1,0 +1,90 @@
+/* Style général de la navbar */
+.navbar {
+    width: calc(100% - 270px); /* Adjust based on sidebar width */
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 270px; /* Sidebar width */
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Ajustement si la sidebar est réduite */
+.sidebar-collapsed .navbar {
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+/* Barre de recherche */
+.search-container {
+    display: flex;
+    background: #f9f9f9;
+    margin-top: 15px;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 5px;
+    width: 200px;
+}
+
+.search-icon {
+    color: #666;
+    cursor: pointer;
+    background-color: white;
+}
+
+/* Espace entre les icônes */
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Augmente l'espacement */
+}
+
+/* Style des icônes */
+.icon {
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+/* Couleurs des icônes */
+.globe { color: #3498db; }  /* Bleu */
+.moon { color: #f1c40f; }   /* Jaune */
+.bell { color: #e74c3c; }   /* Rouge */
+.user { color: #2c3e50; }   /* Bleu foncé */
+
+/* Effet au survol */
+.icon:hover {
+    transform: scale(1.1);
+}
+
+/* Style de la notification */
+.notification-container {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 50%;
+}
+
+/* Assure que le contenu sous la navbar n'est pas caché */
+.content-container {
+    margin-top: 80px; /* Ajoute un espace sous la navbar */
+    padding: 20px;
+}

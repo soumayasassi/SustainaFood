@@ -1,0 +1,679 @@
+/* AddDonation.css - SustainaFood Theme */
+
+/* Base styles matching home page */
+.addDonation {
+  font-family: "Poppins", sans-serif;
+  background: #f0f8f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.addDonation-form {
+  width: 100%;
+  max-width: 800px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative elements matching home page */
+.addDonation-form::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(34, 139, 34, 0.1);
+  z-index: 0;
+}
+
+.addDonation-form::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 15%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(34, 139, 34, 0.08);
+  z-index: 0;
+}
+
+/* Logo and heading */
+.addDonation-logo {
+  display: block;
+  width: 120px;
+  height: auto;
+  margin: 0 auto 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.addDonation-h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1a7a1a;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.addDonation-h1::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #228b22, #56ab2f);
+  border-radius: 2px;
+}
+
+/* Input styles */
+.addDonation-input-container {
+  position: relative;
+  margin-bottom: 25px;
+  z-index: 1;
+}
+.addDonation-input-Location {
+  margin-bottom: 25px;
+  z-index: 1;
+}
+
+
+.addDonation-input {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  color: #3a5a3a;
+  font-family: "Poppins", sans-serif;
+}
+
+.addDonation-input:focus {
+  outline: none;
+  border-color: #228b22;
+  box-shadow: 0 0 0 3px rgba(34, 139, 34, 0.1);
+}
+
+.addDonation-input-container label {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  color: #6c757d;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  padding: 0 5px;
+}
+.addDonation-input-Location label {
+  position: absolute;
+  left: 16px;
+  top: -35px;
+  color: #6c757d;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  padding: 0 5px;
+}
+
+.addDonation-input:focus ~ label,
+.addDonation-input:not(:placeholder-shown) ~ label {
+  top: -8px;
+  left: 12px;
+  font-size: 12px;
+  color: #228b22;
+  font-weight: 600;
+}
+
+.addDonation-input[type="date"] {
+  color: #3a5a3a;
+}
+
+.addDonation-input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  color: #228b22;
+}
+
+.addDonation-input[type="date"] ~ label {
+  top: -8px;
+  left: 12px;
+  font-size: 12px;
+  background-color: #ffffff;
+  padding: 0 5px;
+}
+
+textarea.addDonation-input {
+  min-height: 120px;
+  resize: vertical;
+}
+
+select.addDonation-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23228b22' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+select.addDonation-input ~ label {
+  top: -8px;
+  left: 12px;
+  font-size: 12px;
+  background-color: #ffffff;
+  padding: 0 5px;
+}
+
+.addDonation-char-count {
+  font-size: 12px;
+  color: #6c757d;
+  text-align: right;
+  margin-top: 5px;
+}
+
+/* Button styles matching home page */
+.addDonation-button {
+  display: inline-block;
+  padding: 16px 36px;
+  font-size: 18px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #228b22, #56ab2f);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(34, 139, 34, 0.2);
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+  width: auto;
+  text-align: center;
+}
+
+.addDonation-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(34, 139, 34, 0.3);
+}
+
+.addDonation-button::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  animation: shimmer 3s infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* File upload styles */
+.addDonation-container-btn-file {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #228b22, #56ab2f);
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 20px 0;
+  box-shadow: 0 6px 15px rgba(34, 139, 34, 0.2);
+  width: 100%;
+}
+
+.addDonation-container-btn-file:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(34, 139, 34, 0.3);
+}
+
+.addDonation-container-btn-file svg {
+  width: 20px;
+  height: 20px;
+}
+
+.addDonation-file-name {
+  display: block;
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 20px;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Radio button styles */
+.addDonation-radio-buttons-container {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 25px;
+  z-index: 1;
+  position: relative;
+}
+
+.addDonation-radio-button {
+  display: flex;
+  align-items: center;
+}
+
+.addDonation-radio-button__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.addDonation-radio-button__label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #3a5a3a;
+  font-weight: 500;
+}
+
+.addDonation-radio-button__custom {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #228b22;
+  border-radius: 50%;
+  position: relative;
+}
+
+.addDonation-radio-button__input:checked + .addDonation-radio-button__label .addDonation-radio-button__custom::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: #228b22;
+  border-radius: 50%;
+  animation: radioScale 0.2s ease-in-out;
+}
+
+@keyframes radioScale {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Table styles - FIXED to prevent cutting off */
+.addDonation-product-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 20px 0;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1;
+  table-layout: fixed; /* Fixed table layout to prevent column resizing */
+}
+
+/* Table container to enable horizontal scrolling */
+.addDonation-table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.addDonation-product-table thead {
+  background: linear-gradient(135deg, #228b22, #56ab2f);
+  color: white;
+}
+
+.addDonation-product-table th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 16px;
+  white-space: nowrap; /* Prevent header text from wrapping */
+}
+
+.addDonation-product-table td {
+  padding: 16px;
+  border-top: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #3a5a3a;
+  word-break: break-word; /* Allow text to break to prevent overflow */
+}
+
+.addDonation-product-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.addDonation-product-table tr:hover {
+  background-color: #f0f8f0;
+}
+
+/* Make sure all columns have equal width */
+.addDonation-product-table th,
+.addDonation-product-table td {
+  width: auto;
+  min-width: 100px; /* Minimum width for columns */
+}
+
+/* Add horizontal scrolling for the table */
+.addDonation-product-table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbar for tables */
+.addDonation-product-table::-webkit-scrollbar {
+  height: 8px;
+}
+
+.addDonation-product-table::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+.addDonation-product-table::-webkit-scrollbar-thumb {
+  background: #228b22;
+  border-radius: 4px;
+}
+
+.addDonation-product-table::-webkit-scrollbar-thumb:hover {
+  background: #1a7a1a;
+}
+
+/* Edit input styles */
+.addDonation-edit-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #3a5a3a;
+}
+
+.addDonation-edit-input:focus {
+  outline: none;
+  border-color: #228b22;
+  box-shadow: 0 0 0 2px rgba(34, 139, 34, 0.1);
+}
+
+/* Icon styles */
+.addDonation-fa-edit {
+  color: #3a5a3a;
+  cursor: pointer;
+  font-size: 20px;
+  transition: color 0.2s ease;
+}
+
+.addDonation-fa-edit:hover {
+  color: #228b22;
+}
+
+.addDonation-fa-trash {
+  color: #e74c3c;
+  cursor: pointer;
+  font-size: 20px;
+  transition: color 0.2s ease;
+  margin-left: 15px;
+}
+
+.addDonation-fa-trash:hover {
+  color: #c0392b;
+}
+
+.addDonation-fa-save {
+  color: #228b22;
+  cursor: pointer;
+  font-size: 20px;
+  transition: color 0.2s ease;
+}
+
+.addDonation-fa-save:hover {
+  color: #1a7a1a;
+}
+
+.addDonation-file-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+/* Manual entry styles */
+.addDonation-manual-product-entry {
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 1px dashed #228b22;
+  position: relative;
+  z-index: 1;
+}
+
+.addDonation-manual-product-row {
+  position: relative;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.addDonation-manual-product-row:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(34, 139, 34, 0.1);
+}
+
+.addDonation-manual-product-row button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.addDonation-manual-product-row button:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* Error message styles */
+.addDonation-error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Map styles */
+.addDonation-map-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  backdrop-filter: blur(5px);
+}
+
+/* Animation for form elements */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.addDonation-input-container {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.addDonation-input-container:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.addDonation-input-container:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.addDonation-input-container:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.addDonation-input-container:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+/* Success message styling */
+.addDonation-success-message {
+  background-color: rgba(34, 139, 34, 0.1);
+  border-left: 4px solid #228b22;
+  padding: 16px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  color: #1a7a1a;
+  font-weight: 500;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .addDonation {
+    padding: 20px;
+  }
+
+  .addDonation-form {
+    padding: 30px 20px;
+  }
+
+  .addDonation-h1 {
+    font-size: 32px;
+  }
+
+  .addDonation-radio-buttons-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .addDonation-product-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .addDonation-manual-product-row {
+    padding: 20px;
+    padding-top: 50px;
+  }
+
+  .addDonation-button {
+    width: 100%;
+  }
+}
+
+/* Food-themed loading indicator */
+.addDonation-loading {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.addDonation-loading:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid #228b22;
+  border-color: #228b22 transparent #56ab2f transparent;
+  animation: addDonation-loading 1.2s infinite;
+}
+
+@keyframes addDonation-loading {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(180deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Food-themed icons for categories */
+.addDonation-category-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Style for the list of products uploaded text */
+p {
+  color: #228b22;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}

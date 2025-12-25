@@ -1,0 +1,208 @@
+/* Style de la page Supermarket */
+.supermarket-dashboardcontent {
+    margin-left: 150px; /* Adjust based on your sidebar width */
+    padding: 20px;
+    padding-top: 80px; /* Add more padding at the top to push content down */
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+/* Sorting Container */
+.sort-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.sort-container label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.sort-container select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: white;
+    transition: border-color 0.3s ease;
+}
+
+.sort-container select:hover {
+    border-color: #007bff;
+}
+
+.sort-container select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Style for the export PDF button */
+.export-pdf-btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.export-pdf-btn:hover {
+    background-color: #45a049;
+}
+.supermarket-list {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1400px;
+    margin-top: 20px;
+    overflow-x: auto; /* Ensure table is scrollable on small screens */
+    margin-top: 50px;
+}
+
+/* Titre */
+.supermarket-list h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Photo des Supermarkets */
+.supermarket-photoList {
+    width: 40px; /* Increase photo size */
+    height: 40px; /* Increase photo size */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Boutons actions */
+.action-buttons button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px;
+    transition: color 0.3s ease-in-out;
+}
+
+.view-btn {
+    color: #656565;
+}
+
+.block-btn {
+    color: #ff9500;
+}
+
+.delete-btn {
+    color: #dc3545;
+}
+
+.action-buttons button:hover {
+    color: black;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.pagination li {
+    margin: 0 5px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.pagination li:hover {
+    background-color: #f8f9fa;
+}
+
+.paginationActive {
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.previousBttn, .nextBttn {
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.previousBttn:hover, .nextBttn:hover {
+    background-color: #f8f9fa;
+}
+
+.paginationDisabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .supermarket-dashboardcontent {
+        margin-left: 0;
+        padding: 10px;
+        padding-top: 60px; /* Adjust for smaller screens */
+    }
+
+    .supermarket-list {
+        padding: 10px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    .pagination li {
+        padding: 6px 10px;
+    }
+}

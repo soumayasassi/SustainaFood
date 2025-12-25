@@ -1,0 +1,46 @@
+.donation-status {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.donation-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.donation-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.donation-info svg {
+    font-size: 24px;
+}
+
+.donation-name {
+    font-weight: bold;
+}
+
+.progress-container {
+    flex: 1;
+    height: 6px;
+    background: #eee;
+    border-radius: 5px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.progress-text {
+    width: 40px;
+    text-align: right;
+}

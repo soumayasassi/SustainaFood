@@ -1,0 +1,774 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f0f8f0;
+    box-sizing: border-box;
+  }
+  
+  /* Main Container */
+  .assigneddel-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Enhanced Header Section */
+  .assigneddel-header-section {
+    background: linear-gradient(135deg, #f0f8f0 0%, #e0f0e0 100%);
+    padding: 30px 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .assigneddel-header-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23228b22' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+    opacity: 0.5;
+    z-index: 0;
+  }
+  
+  .assigneddel-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .assigneddel-title {
+    color: #228b22;
+    font-size: 42px;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .assigneddel-title-icon {
+    font-size: 40px;
+    margin-right: 15px;
+    color: #228b22;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.1));
+  }
+  
+  /* Controls Section */
+  .assigneddel-controls-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Search */
+  .assigneddel-search-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background: white;
+    padding: 12px 15px;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+  }
+  
+  .assigneddel-search-container:hover,
+  .assigneddel-search-container:focus-within {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    border-color: rgba(34, 139, 34, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .assigneddel-search-icon {
+    color: #228b22;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .assigneddel-search-input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    padding: 0;
+    background: transparent;
+    color: #333;
+  }
+  
+  .assigneddel-search-input::placeholder {
+    color: #aaa;
+    font-style: italic;
+  }
+  
+  .assigneddel-filter-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .assigneddel-select-wrapper {
+    position: relative;
+    min-width: 200px;
+  }
+  
+  .assigneddel-select {
+    appearance: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 40px 12px 15px;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    background-color: white;
+    color: #333;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .assigneddel-select:hover,
+  .assigneddel-select:focus {
+    border-color: rgba(34, 139, 34, 0.3);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+  }
+  
+  .assigneddel-select-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #228b22;
+    font-size: 18px;
+  }
+  
+  .assigneddel-status-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #28a745;
+    margin-right: 8px;
+  }
+  
+  .assigneddel-calendar-icon {
+    color: #228b22;
+    margin-right: 8px;
+  }
+  
+  /* Delivery Card - Enhanced */
+  .assigneddel-card {
+    background: #ffffff;
+    border-left: 5px solid #228b22;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .assigneddel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  }
+  
+  .assigneddel-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(to bottom, #228b22, #56ab2f);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .assigneddel-card:hover::after {
+    opacity: 0.7;
+  }
+  
+  @media (max-width: 768px) {
+    .assigneddel-card {
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Profile Section - Enhanced */
+  .assigneddel-profile-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .assigneddel-profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #228b22;
+    box-shadow: 0 3px 8px rgba(34, 139, 34, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .assigneddel-profile-info:hover .assigneddel-profile-img {
+    transform: scale(1.1);
+  }
+  
+  .assigneddel-profile-text {
+    margin: 0;
+    font-size: 17px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .assigneddel-profile-link {
+    font-size: 17px;
+    font-weight: bold;
+    color: #228b22;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .assigneddel-profile-link:hover {
+    color: #56ab2f;
+    text-decoration: underline;
+  }
+  
+  /* Availability Section - Enhanced */
+  .assigneddel-availability-section {
+    background: #f9fff9;
+    padding: 18px;
+    border-radius: 10px;
+    border-left: 4px solid #228b22;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .assigneddel-availability-title {
+    color: #228b22;
+    font-size: 18px;
+    margin: 0 0 12px;
+    font-weight: 600;
+  }
+  
+  .assigneddel-availability-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    color: #666;
+    margin: 8px 0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .assigneddel-availability-status:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+  
+  .assigneddel-availability-status svg {
+    font-size: 18px;
+  }
+  
+  .assigneddel-availability-status.available {
+    color: #155724;
+    background-color: rgba(21, 87, 36, 0.05);
+  }
+  
+  .assigneddel-availability-status.available svg {
+    color: #28a745;
+  }
+  
+  .assigneddel-availability-status.unavailable {
+    color: #721c24;
+    background-color: rgba(114, 28, 36, 0.05);
+  }
+  
+  .assigneddel-availability-status.unavailable svg {
+    color: #dc3545;
+  }
+  
+  /* Delivery Details - Enhanced */
+  .assigneddel-delivery-details {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+  }
+  
+  .assigneddel-delivery-detail {
+    font-size: 15px;
+    color: #495057;
+    margin: 5px 0;
+    padding: 5px 0;
+  }
+  
+  .assigneddel-delivery-detail strong {
+    color: #222;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 120px;
+  }
+  
+  /* Status Badge - Enhanced */
+  .assigneddel-status-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-transform: capitalize;
+  }
+  
+  .assigneddel-status-badge.pending {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+  }
+  
+  .assigneddel-status-badge.accepted {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+  
+  .assigneddel-status-badge.in_progress {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+  }
+  
+  .assigneddel-status-badge.picked_up {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+  }
+  
+  .assigneddel-status-badge.delivered {
+    background-color: #cce5ff;
+    color: #004085;
+    border: 1px solid #b8daff;
+  }
+  
+  .assigneddel-status-badge.failed {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+  
+  /* Item Section - Enhanced */
+  .assigneddel-item-section {
+    margin-bottom: 20px;
+  }
+  
+  .assigneddel-items-title {
+    font-size: 18px;
+    color: #228b22;
+    margin: 0 0 15px;
+    font-weight: 600;
+  }
+  
+  .assigneddel-item-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .assigneddel-item {
+    background: #ffffff;
+    padding: 15px;
+    border-left: 4px solid #228b22;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    font-size: 15px;
+    transition: transform 0.2s ease;
+  }
+  
+  .assigneddel-item:hover {
+    transform: translateX(5px);
+  }
+  
+  .assigneddel-item-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 5px;
+  }
+  
+  .assigneddel-item-details span {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    padding: 3px 0;
+  }
+  
+  .assigneddel-item-quantity {
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #d9534f;
+    padding: 6px 12px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(217, 83, 79, 0.3);
+  }
+  
+  @media (max-width: 768px) {
+    .assigneddel-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .assigneddel-item-quantity {
+      font-size: 13px;
+      padding: 6px;
+    }
+  }
+  
+  /* Button Container - Enhanced */
+  .assigneddel-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+  }
+  
+  /* Action Buttons - Enhanced */
+  .assigneddel-action-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+  }
+  
+  .assigneddel-action-button:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .assigneddel-action-button:active:not(:disabled) {
+    transform: translateY(1px);
+  }
+  
+  .assigneddel-action-button.accept-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .assigneddel-action-button.accept-btn:hover {
+    background-color: #218838;
+  }
+  
+  .assigneddel-action-button.refuse-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .assigneddel-action-button.refuse-btn:hover {
+    background-color: #c82333;
+  }
+  
+  .assigneddel-action-button.start-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .assigneddel-action-button.start-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .assigneddel-action-button.picked-up-btn {
+    background-color: #ffc107;
+    color: white;
+  }
+  
+  .assigneddel-action-button.picked-up-btn:hover {
+    background-color: #e0a800;
+  }
+  
+  .assigneddel-action-button.delivered-btn {
+    background-color: #17a2b8;
+    color: white;
+  }
+  
+  .assigneddel-action-button.delivered-btn:hover {
+    background-color: #138496;
+  }
+  
+  .assigneddel-action-button.map-btn {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .assigneddel-action-button.map-btn:hover {
+    background-color: #5a6268;
+  }
+  
+  .assigneddel-action-button.feedback-btn {
+    background-color: #228b22;
+    color: white;
+  }
+  
+  .assigneddel-action-button.feedback-btn:hover {
+    background-color: #56ab2f;
+  }
+  
+  .assigneddel-action-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* Spinner */
+  .assigneddel-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 5px;
+  }
+  
+  .assigneddel-spinner.sm {
+    width: 12px;
+    height: 12px;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Modal */
+  .assigneddel-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .assigneddel-modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  .assigneddel-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  /* Feedback Form */
+  .assigneddel-feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .assigneddel-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .assigneddel-form-label {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .assigneddel-feedback-textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    min-height: 80px;
+  }
+  
+  .assigneddel-submit-button {
+    padding: 8px 16px;
+    background: #228b22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    align-self: flex-start;
+  }
+  
+  .assigneddel-submit-button:hover:not(:disabled) {
+    background: #56ab2f;
+  }
+  
+  .assigneddel-submit-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .assigneddel-feedback-message {
+    font-size: 14px;
+    color: #155724;
+    margin: 5px 0;
+  }
+  
+  .assigneddel-feedback-message.error {
+    color: #721c24;
+  }
+  
+  /* Pagination */
+  .assigneddel-pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+  }
+  
+  .assigneddel-pagination-controls button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background: #228b22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .assigneddel-pagination-controls button:hover:not(:disabled) {
+    background: #56ab2f;
+  }
+  
+  .assigneddel-pagination-controls button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .assigneddel-pagination-controls span {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Loading and Error States */
+  .assigneddel-loading-message {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .assigneddel-error-container {
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .assigneddel-no-deliveries {
+    font-size: 18px;
+    color: #888;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .assigneddel-header-section {
+      padding: 20px 15px;
+    }
+    
+    .assigneddel-title {
+      font-size: 32px;
+    }
+    
+    .assigneddel-title-icon {
+      font-size: 30px;
+      margin-right: 10px;
+    }
+    
+    .assigneddel-controls-container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .assigneddel-search-container {
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+    
+    .assigneddel-filter-container {
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    .assigneddel-select-wrapper {
+      flex: 1;
+      min-width: 0;
+    }
+  }
+  

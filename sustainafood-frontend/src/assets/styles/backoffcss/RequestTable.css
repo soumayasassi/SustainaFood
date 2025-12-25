@@ -1,0 +1,172 @@
+
+
+
+.request-list{
+background-color: white;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 12px;
+}
+/* General Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Table Header */
+table thead {
+  background-color: #4CAF50;
+  color: white;
+  text-align: left;
+}
+
+table th, table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* Table Rows */
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.view-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.view-btn a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.view-btn:hover a {
+  color: #388E3C;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination li {
+  padding: 8px 12px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.pagination .active {
+  background: #4CAF50;
+  color: white;
+  border: none;
+}
+
+/* Sort Container */
+.sort-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.sort-container select {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Export Button */
+.export-pdf-btn {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 4px;
+}
+
+.export-pdf-btn:hover {
+  background-color: #b71c1c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .sort-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .export-pdf-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Filter Section */
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.filter-container label {
+  font-weight: bold;
+}
+
+.filter-container select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+  transition: border 0.3s;
+}
+
+.filter-container select:focus {
+  border-color: #228b22;
+  outline: none;
+}

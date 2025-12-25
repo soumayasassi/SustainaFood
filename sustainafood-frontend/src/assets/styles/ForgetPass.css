@@ -1,0 +1,66 @@
+.forget-pass-container { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Ensure positioning context for pseudo-element */
+    overflow: hidden;
+  }
+  
+  .forget-pass-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/welcomeback.png'); /* Ensure the path is correct */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3; /* Set the opacity of the background image */
+    z-index: 1; /* Ensure the background is above the container but below the card */
+  }
+  
+  .forget-pass-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+    position: relative; /* Ensure card is on top of the background */
+    z-index: 2; /* Ensure the card is above the background */
+  }
+  
+  .forget-pass-card h2 {
+    margin-bottom: 10px;
+  }
+  
+  .forget-pass-card p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .forget-pass-card input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .forget-pass-card button {
+    width: 100%;
+    padding: 10px;
+    background-color: #79ba7d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .forget-pass-card button:hover {
+    background-color: #8dc73f;
+  }

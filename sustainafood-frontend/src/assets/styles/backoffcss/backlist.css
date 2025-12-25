@@ -1,0 +1,262 @@
+/* Backoffice List Container Styles */
+.backlist-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin: 20px;
+  }
+  
+  /* Header Container: Title and action button */
+  .backlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .backlist-title {
+    font-size: 22px;
+    margin: 0;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  /* Export/Action Button */
+  .backlist-action-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(76, 175, 80, 0.2);
+  }
+  
+  .backlist-action-button:hover {
+    background-color: #45a049;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(76, 175, 80, 0.3);
+  }
+  
+  /* Search Container */
+  .backlist-search {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .sort-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .sort-container label {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .sort-container select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .sort-container select:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 4px rgba(76, 175, 80, 0.2);
+  }
+  
+  /* Table Styles */
+  .backlist-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px #f0f0f0;
+  }
+  
+  .backlist-table-head {
+    background-color: #f8f9fa;
+  }
+  
+  .backlist-table-header,
+  .backlist-table-cell {
+    padding: 14px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .backlist-table-header {
+    font-weight: 600;
+    color: #444;
+    font-size: 14px;
+  }
+  
+  .backlist-table-cell {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .backlist-table-row:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .backlist-table-row:last-child .backlist-table-cell {
+    border-bottom: none;
+  }
+  
+  /* Row Action Buttons */
+  .backlist-row-action {
+    background-color: #4caf50;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 13px;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+  }
+  
+  .backlist-row-action:hover {
+    background-color: #45a049;
+    transform: translateY(-1px);
+  }
+  
+  .backlist-actions-cell {
+    white-space: nowrap;
+  }
+  
+  /* Pagination Styles */
+  .backlist-pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+    gap: 5px;
+  }
+  
+  .backlist-pagination-item {
+    margin: 0;
+  }
+  
+  .backlist-pagination-link {
+    color: #555;
+    padding: 8px 12px;
+    text-decoration: none;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: white;
+    transition: all 0.2s ease;
+    font-size: 14px;
+  }
+  
+  .backlist-pagination-link:hover,
+  .backlist-pagination-link:focus {
+    background-color: #f9f9f9;
+    border-color: #ddd;
+  }
+  
+  .backlist-pagination-active .backlist-pagination-link {
+    background-color: #4caf50;
+    color: white;
+    border-color: #4caf50;
+    font-weight: 500;
+  }
+  
+  .backlist-pagination-disabled .backlist-pagination-link {
+    color: #ccc;
+    cursor: not-allowed;
+    background-color: #f9f9f9;
+    border-color: #eee;
+  }
+  
+  /* Loading and Error States */
+  .backlist-loading,
+  .backlist-error {
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+    color: #666;
+  }
+  
+  /* Empty State */
+  .backlist-empty {
+    padding: 30px;
+    text-align: center;
+    color: #666;
+    font-size: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin: 20px 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .backlist-container {
+      margin: 10px;
+      padding: 15px;
+    }
+  
+    .backlist-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .backlist-title {
+      margin-bottom: 10px;
+    }
+  
+    .backlist-search {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .sort-container {
+      flex-wrap: wrap;
+    }
+  
+    .backlist-table-header,
+    .backlist-table-cell {
+      padding: 10px 8px;
+      font-size: 13px;
+    }
+  
+    .backlist-row-action {
+      padding: 5px 8px;
+      font-size: 12px;
+    }
+  
+    /* Stack buttons on mobile */
+    .backlist-actions-cell {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .backlist-row-action {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+  }
+  

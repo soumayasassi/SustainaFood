@@ -1,0 +1,811 @@
+/* EditProfile.css - Royal Edition with Decorative Elements */
+
+:root {
+  --royal-green: #8dc73f;
+  --royal-green-dark: #71a63f;
+  --royal-green-light: rgba(141, 199, 63, 0.1);
+  --royal-gold: #f0c14b;
+  --royal-gold-light: rgba(240, 193, 75, 0.1);
+  --royal-white: #ffffff;
+  --royal-off-white: #f8f9fa;
+  --royal-gray-light: #e9ecef;
+  --royal-gray: #ced4da;
+  --royal-text: #2c3e50;
+  --royal-text-light: #6c757d;
+  --royal-shadow: rgba(0, 0, 0, 0.08);
+  --royal-shadow-hover: rgba(0, 0, 0, 0.15);
+  --royal-error: #e74c3c;
+  --bg-mint: #f0f5f0;
+}
+
+body {
+  background-color: var(--bg-mint);
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Decorative background circles */
+body::before {
+  content: "";
+  position: fixed;
+  top: -150px;
+  right: -150px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: rgba(141, 199, 63, 0.1);
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -100px;
+  left: -100px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgba(141, 199, 63, 0.08);
+  z-index: -1;
+}
+
+.editprofile-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  background: var(--royal-white);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(141, 199, 63, 0.15);
+  margin: 30px auto;
+  padding: 40px;
+  overflow: visible;
+  transition: all 0.3s ease;
+}
+
+/* Card shape with curved corner */
+.editprofile-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background-color: var(--bg-mint);
+  border-radius: 0 0 0 100%;
+  z-index: 0;
+}
+
+.editprofile-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  background-color: var(--bg-mint);
+  border-radius: 0 100% 0 0;
+  z-index: 0;
+}
+
+.editprofile-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+.editprofile-container:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.editprofile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.editprofile-header::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(141, 199, 63, 0.5), rgba(141, 199, 63, 0.1), transparent);
+}
+
+.editprofile-profile-section {
+  flex: 1;
+  max-width: 450px;
+}
+
+.editprofile-profile-image-container {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  margin: 0;
+  border-radius: 50%;
+  background: var(--royal-white);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border: 4px solid var(--royal-green);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.editprofile-profile-image-container:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  border-color: var(--royal-gold);
+}
+
+.editprofile-profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.editprofile-profile-image:hover {
+  transform: scale(1.08);
+}
+
+.editprofile-photo-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 32px;
+  height: 32px;
+  background: var(--royal-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border: 2px solid var(--royal-white);
+  z-index: 2;
+}
+
+.editprofile-photo-icon:hover {
+  background: var(--royal-gold);
+  transform: scale(1.1) rotate(5deg);
+}
+
+.editprofile-row {
+  margin: 0;
+  display: contents;
+}
+
+.editprofile-col-md-3,
+.editprofile-col-md-5,
+.editprofile-col-md-4 {
+  padding: 20px;
+  width: 100%;
+}
+
+.editprofile-col-md-3 {
+  background-color: rgba(248, 252, 248, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.editprofile-col-md-5,
+.editprofile-col-md-4 {
+  background-color: rgba(248, 252, 248, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 500px;
+}
+
+.editprofile-d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.editprofile-align-items-center {
+  align-items: center;
+}
+
+.editprofile-text-center {
+  text-align: center;
+}
+
+.editprofile-font-weight-bold {
+  font-weight: 600;
+  color: var(--royal-text);
+  font-size: 1.4rem;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.editprofile-text-black-50 {
+  color: var(--royal-text-light);
+  font-size: 0.95rem;
+  margin: 5px 0 0 0;
+}
+
+.editprofile-labels {
+  font-size: 14px;
+  color: #3a5a3a;
+  margin-bottom: 5px;
+}
+
+.login-input {
+  background: var(--royal-off-white);
+  outline: none;
+  border: 1px solid var(--royal-gray-light);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 0;
+  display: block;
+  color: var(--royal-text);
+  font-weight: 500;
+  font-size: 0.95em;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+}
+
+.login-input:focus {
+  border-color: var(--royal-green);
+  background: var(--royal-white);
+  box-shadow: 0 0 0 3px rgba(141, 199, 63, 0.15);
+}
+
+.login-input:hover {
+  border-color: var(--royal-green-dark);
+  background: var(--royal-white);
+}
+
+.login-input.error {
+  border-color: var(--royal-error);
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.1);
+}
+
+select.login-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238dc73f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 40px;
+}
+
+.editprofile-profile-button {
+  background: linear-gradient(135deg, #8dc73f, #71a63f);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(141, 199, 63, 0.3);
+}
+
+.editprofile-profile-button:hover {
+  background: linear-gradient(135deg, #71a63f, #5a8a2f);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(141, 199, 63, 0.4);
+}
+
+.editprofile-experience {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a7a1a;
+}
+
+img.editprofile-rounded-circle {
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Label styles */
+.login-label {
+  position: absolute;
+  left: 0;
+  top: -22px;
+  color: var(--royal-green);
+  font-size: 0.9em;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  letter-spacing: 0.3px;
+}
+
+.login-input-block {
+  position: relative;
+  margin: 0;
+}
+
+/* Transitions when input is focused or filled */
+.login-input:focus + .login-label,
+.login-input:valid + .login-label,
+.login-input:not(:placeholder-shown) + .login-label {
+  transform: none;
+  color: #71a63f;
+  font-weight: 500;
+}
+
+/* Hide default file input */
+.login-input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  background: linear-gradient(to right, var(--royal-green-light), rgba(141, 199, 63, 0.05));
+  color: var(--royal-green-dark);
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(141, 199, 63, 0.2);
+  font-weight: 500;
+  font-size: 0.9em;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.03);
+}
+
+.custom-file-upload:hover {
+  background: linear-gradient(to right, rgba(141, 199, 63, 0.15), rgba(141, 199, 63, 0.1));
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.custom-file-upload img {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+
+.file-name {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #3a5a3a;
+  background: rgba(141, 199, 63, 0.1);
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* From Uiverse.io by sameer2malik */
+.loginsignup-container {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.login-container {
+  display: flex;
+  width: 100%;
+  max-width: 720px;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 252, 248, 0.9));
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(141, 199, 63, 0.2);
+  margin: 120px auto;
+}
+
+.login-left {
+  width: 66%;
+  height: 100%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  backdrop-filter: blur(20px);
+  position: relative;
+}
+
+.login-form::before {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 40%;
+  right: 1%;
+  z-index: -1;
+  background: radial-gradient(circle, #71a63f, rgba(141, 199, 63, 0.37) 60%, rgba(113, 166, 63, 0.2) 100%);
+  filter: blur(70px);
+  border-radius: 50%;
+}
+
+.login-right {
+  width: 34%;
+  height: 100%;
+}
+
+.login-img {
+  width: 100%;
+  max-width: 270px;
+  height: auto;
+  max-height: 300px;
+  margin-top: 100px;
+}
+
+.login-logo {
+  width: 100px;
+  height: 100px;
+  margin-left: 15px;
+}
+
+.login-container::after {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 80%;
+  right: -40%;
+  background: rgb(151, 209, 162);
+  background: radial-gradient(circle, #71a63f 100%, #71a63f 100%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.editprofile-text-right {
+  color: var(--royal-green);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-left: auto;
+  position: relative;
+  letter-spacing: -0.5px;
+}
+
+.editprofile-text-right::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--royal-gold);
+  border-radius: 2px;
+}
+
+.editprofile-user-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+}
+
+.login-button {
+  background: linear-gradient(135deg, var(--royal-green), var(--royal-green-dark));
+  border: none;
+  border-radius: 30px;
+  padding: 14px 30px;
+  margin: 40px auto 0;
+  display: block;
+  color: white;
+  font-weight: 600;
+  font-size: 1em;
+  width: 100%;
+  max-width: 250px;
+  box-shadow: 0 5px 15px rgba(141, 199, 63, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  grid-column: span 2;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.6s ease;
+}
+
+.login-button:hover {
+  background: linear-gradient(135deg, var(--royal-green-dark), #5a8a2f);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(141, 199, 63, 0.4);
+}
+
+.login-button:hover::before {
+  left: 100%;
+}
+
+.login-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(141, 199, 63, 0.3);
+}
+
+.login-input-block {
+  position: relative;
+  margin-top: 0;
+}
+
+.login-forgot {
+  display: block;
+  margin: 5px 0 10px 0;
+  margin-left: 35px;
+  color: #71a63f;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+}
+
+.login-forgot:hover {
+  color: #5a8a2f;
+  text-decoration: underline;
+}
+
+.login-a {
+  color: #8dc73f;
+  transition: all 0.3s ease;
+}
+
+.login-a:hover {
+  color: #5a8a2f;
+  text-decoration: underline;
+}
+
+.editprofile-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* Position the camera icon within the container */
+/* Make the image fill the container */
+/* Ensure the container has the same width/height as the image */
+/* Position the camera icon within the container */
+.editprofile-photo-icon i {
+  font-size: 16px;
+  color: white;
+}
+
+/* Hide the file input by default */
+#file-upload-photo,
+#file-upload-student {
+  display: none;
+}
+
+/* Error message styling */
+.error-field {
+  color: var(--royal-error);
+  font-size: 0.75em;
+  margin-top: 5px;
+  font-weight: 500;
+  padding-left: 5px;
+}
+
+/* Student card image preview */
+.student-card-preview {
+  margin-top: 15px;
+  text-align: center;
+  grid-column: span 2;
+}
+
+.student-card-preview img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--royal-gray-light);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.student-card-preview img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* For student card upload section - span full width */
+.row3 {
+  grid-column: span 2;
+}
+
+/* Additional decorative circles */
+.decorative-circles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(141, 199, 63, 0.05);
+  z-index: -1;
+}
+
+.circle-1 {
+  width: 150px;
+  height: 150px;
+  top: -75px;
+  right: 10%;
+  background-color: rgba(141, 199, 63, 0.07);
+}
+
+.circle-2 {
+  width: 80px;
+  height: 80px;
+  bottom: 10%;
+  right: 5%;
+  background-color: rgba(141, 199, 63, 0.05);
+}
+
+.circle-3 {
+  width: 120px;
+  height: 120px;
+  top: 20%;
+  left: -60px;
+  background-color: rgba(240, 193, 75, 0.05);
+}
+
+.circle-4 {
+  width: 60px;
+  height: 60px;
+  bottom: 15%;
+  left: 10%;
+  background-color: rgba(141, 199, 63, 0.07);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .editprofile-container {
+    padding: 30px 20px;
+  }
+
+  .editprofile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .editprofile-user-info {
+    margin: 15px 0 0;
+    align-items: center;
+  }
+
+  .editprofile-text-right {
+    margin: 20px 0 0;
+    text-align: center;
+  }
+
+  .editprofile-text-right::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+  }
+
+  .editprofile-form {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .row3,
+  .login-button {
+    grid-column: span 1;
+  }
+
+  .student-card-preview {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .editprofile-container {
+    padding: 25px 15px;
+  }
+
+  .editprofile-profile-image-container {
+    width: 90px;
+    height: 90px;
+  }
+
+  .editprofile-font-weight-bold {
+    font-size: 1.2rem;
+  }
+
+  .editprofile-text-right {
+    font-size: 1.5rem;
+  }
+
+  .login-input {
+    padding: 12px 14px;
+  }
+
+  .custom-file-upload {
+    padding: 10px 15px;
+    font-size: 0.85em;
+  }
+}
+
+/* Animation for profile image */
+@keyframes subtle-pulse {
+  0% {
+    box-shadow: 0 5px 15px rgba(141, 199, 63, 0.3);
+  }
+  50% {
+    box-shadow: 0 5px 20px rgba(141, 199, 63, 0.5);
+  }
+  100% {
+    box-shadow: 0 5px 15px rgba(141, 199, 63, 0.3);
+  }
+}
+
+.editprofile-profile-image-container {
+  animation: subtle-pulse 3s infinite ease-in-out;
+}
+
+/* Elegant focus styles */
+.login-input:focus {
+  border-color: var(--royal-green);
+  box-shadow: 0 0 0 3px rgba(141, 199, 63, 0.15);
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Elegant hover styles for inputs */
+.login-input:hover:not(:focus) {
+  border-color: rgba(141, 199, 63, 0.5);
+}
+
+/* Add a subtle shine effect to the profile image */
+.editprofile-profile-image-container::after {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -100%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  20% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Add a subtle gold accent to the save button */
+.login-button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--royal-gold);
+  opacity: 0.5;
+}

@@ -1,0 +1,51 @@
+/* src/assets/styles/backoffcss/ProductDetail.css */
+
+.product-detail-container {
+    display: flex; /* Pour aligner Sidebar et content */
+  }
+  
+  .product-detail-content {
+    flex: 1; /* Prend tout l'espace disponible */
+    padding: 20px;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transform: translateY(50px); /* Ajuste cette valeur selon tes besoins */
+  }
+  
+  .product-header {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .details-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .details-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: left;
+  }
+  
+  .details-table td:first-child {
+    font-weight: bold;
+    width: 20%;
+  }
+  
+  .details-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .loading {
+      text-align: center;
+      padding: 20px;
+      font-style: italic;
+      color: #888;
+  }

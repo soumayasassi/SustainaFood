@@ -1,0 +1,516 @@
+
+/* Style général */
+.navbarfront {
+  background: white;
+  padding: 0.6rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  height: 50px;
+}
+
+.title {
+  color: #228B22;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #8dc73f;
+  font-weight: bold;
+}
+
+/* Style Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  color: black;
+  font-size: 1rem;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+  color: #8dc73f;
+  font-weight: bold;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 10px 0;
+  z-index: 1000;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: black;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background: #8dc73f;
+  color: white;
+}
+
+/* Profil Menu */
+.profile-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile-img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1000;
+  min-width: 200px;
+}
+
+.dropdown-menu.active {
+  display: block;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.dropdown-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-weight: bold;
+  color: #000;
+}
+
+.user-email {
+  font-size: 0.8rem;
+  color: #434141;
+}
+
+.menu-item {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.menu-item:hover {
+  background: #8dc73f;
+  color: white;
+}
+
+.logout {
+  color: red;
+  font-weight: bold;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.auth-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.signin {
+  color: #8dc73f;
+  border: 1px solid #8dc73f;
+}
+
+.signin:hover {
+  background-color: rgba(141, 199, 63, 0.1);
+}
+
+.signup {
+  background-color: #8dc73f;
+  color: white;
+}
+
+.signup:hover {
+  background-color: #7ab32f;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .navbarfront {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.8rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    z-index: 1000;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .auth-buttons {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 1rem;
+    gap: 0.5rem;
+  }
+
+  .auth-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .bar {
+    background: black;
+    height: 3px;
+    width: 20px;
+    margin: 2px 0;
+    transition: 0.4s;
+  }
+
+  /* Animation pour le menu burger */
+  .menu-toggle.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+/* notification Design */
+/* Existing styles... */
+
+/* Notification Bell and Dropdown */
+.notification-bell {
+  position: relative;
+  cursor: pointer;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.notification-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+}
+
+.notification-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+.notification-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.notification-item.unread {
+  background-color: #f0f0f0; /* Fond pour notifications non lues */
+}
+
+.notification-item.read {
+  background-color: #ffffff;
+}
+
+.notification-item:hover {
+  background-color: #e9ecef;
+}
+
+.notification-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.notification-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.notification-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.notification-content small {
+  font-size: 0.75rem;
+  color: #777;
+  margin-top: 3px;
+}
+
+.notification-status {
+  width: 10px;
+  height: 10px;
+  background-color: blue;
+  border-radius: 50%;
+  margin-left: auto; /* Pousse le point bleu à droite */
+}
+
+
+/* Ensure the social-icons container doesn't interfere */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.messenger-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.messenger-dropdown-toggle {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f0f2f5;
+  transition: background-color 0.3s;
+}
+
+.messenger-dropdown-toggle:hover {
+  background-color: #e4e6eb;
+}
+
+.messenger-notification-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #fa3e3e;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.messenger-notification-dropdown {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  width: 320px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  overflow: hidden;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.messenger-messaging-search {
+  padding: 12px 16px;
+  border: none;
+  border-bottom: 1px solid #e4e6eb;
+  width: 100%;
+  font-size: 14px;
+  outline: none;
+}
+
+.messenger-messaging-conversations {
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.messenger-conversation-item {
+  display: flex;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  position: relative;
+}
+
+.messenger-conversation-item:hover {
+  background-color: #f0f2f5;
+}
+
+.messenger-conversation-photo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.messenger-conversation-info {
+  flex: 1;
+  overflow: hidden;
+}
+
+.messenger-conversation-info h3 {
+  margin: 0 0 4px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #050505;
+}
+
+.messenger-conversation-info p {
+  margin: 0;
+  font-size: 13px;
+  color: #65676b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.messenger-conversation-time {
+  font-size: 12px;
+  color: #65676b;
+  position: absolute;
+  top: 12px;
+  right: 16px;
+}
+
+.messenger-unread-count {
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+  background-color: #0084ff;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}

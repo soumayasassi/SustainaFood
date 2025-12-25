@@ -1,0 +1,88 @@
+.prdd-admin-dashboard {
+    display: flex;
+    background-color: #f4f6f9;
+    height: 100vh;
+  }
+  
+  .prdd-profile-container {
+    flex: 1;
+    padding: 50px;
+    overflow-y: auto;
+  }
+  
+  .prdd-chart-container {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    margin-bottom: 30px;
+  }
+  
+  .prdd-download-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .prdd-download-button:hover {
+    background-color: #218838;
+  }
+  
+  .prdd-week-section,
+  .prdd-resolution-section {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .prdd-week-section h4,
+  .prdd-resolution-section h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #28a745;
+    padding-bottom: 5px;
+  }
+  
+  .prdd-ul-predactions {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .prdd-li-predactions {
+    background-color: rgba(40, 167, 69, 0.1);
+    border-left: 5px solid #28a745;
+    padding: 10px 15px;
+    margin: 6px 0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #222;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .prdd-chart-container {
+      padding: 15px;
+    }
+  
+    .prdd-download-button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  

@@ -1,0 +1,170 @@
+/* 🟢 Style général */
+.mydonations-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 🟢 Ajoute un espace sous le Navbar */
+.mydonations-content {
+    padding: 20px;
+    padding-top: 40px; /* Plus d'espace sous le Navbar */
+    flex-grow: 1;
+}
+
+/* 🟢 Style du titre */
+.mydonations-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* 🟢 Style du tableau */
+.mydonations-list {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+/* 🟢 Style du tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/* 🟢 Style des colonnes */
+th, td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 🟢 Style des en-têtes */
+th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 🟢 Effet survol des lignes du tableau */
+tr:hover {
+    background-color: #f2f2f2;
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🟢 Statuts colorés */
+.status {
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+/* 🔵 Statut en attente */
+.status.pending {
+    background-color: #ffcc00;
+    color: #333;
+}
+
+/* 🟢 Statut approuvé */
+.status.approved {
+    background-color: #28a745;
+    color: white;
+}
+
+/* 🔵 Statut livré */
+.status.delivered {
+    background-color: #007bff;
+    color: white;
+}
+
+/* 🟢 Colonne Self-Delivery */
+.self-delivery {
+    font-weight: bold;
+    color: #333;
+}
+
+.self-delivery.yes {
+    color: #28a745; /* ✅ Vert pour "Yes" */
+}
+
+.self-delivery.no {
+    color: #dc3545; /* ❌ Rouge pour "No" */
+}
+
+
+
+/* 🟢 Style des boutons d'action */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* 🟢 Style des icônes */
+.action-buttons button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+/* 🟢 Modifier */
+.edit-btn {
+    color: #007bff;
+}
+
+.edit-btn:hover {
+    color: #0056b3;
+}
+
+/* 🟢 Sauvegarder */
+.save-btn {
+    color: #28a745;
+}
+
+.save-btn:hover {
+    color: #1e7e34;
+}
+
+/* 🟢 Supprimer */
+.delete-btn {
+    color: #dc3545;
+}
+
+.delete-btn:hover {
+    color: #c82333;
+}
+
+/* 🟢 Style des inputs en mode édition */
+.edit-input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* 🟢 Responsive */
+@media (max-width: 768px) {
+    .mydonations-list {
+        padding: 10px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}

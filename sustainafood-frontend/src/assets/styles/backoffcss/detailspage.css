@@ -1,0 +1,223 @@
+/* Detail Page Container Styles */
+.detailspage-container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin: 20px;
+  }
+  
+  /* Header Styles */
+  .detailspage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .detailspage-title {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  /* Content Section */
+  .detailspage-content {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Field Groups */
+  .detailspage-field-group {
+    margin-bottom: 25px;
+  }
+  
+  .detailspage-field-group:last-child {
+    margin-bottom: 0;
+  }
+  
+  .detailspage-field-group-title {
+    font-size: 18px;
+    color: #4caf50;
+    margin-bottom: 15px;
+    font-weight: 600;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e8f5e9;
+  }
+  
+  /* Individual Field Styles */
+  .detailspage-field {
+    display: flex;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+  }
+  
+  .detailspage-field:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  .detailspage-field-label {
+    font-weight: 600;
+    color: #555;
+    width: 150px;
+    flex-shrink: 0;
+    font-size: 15px;
+  }
+  
+  .detailspage-field-value {
+    color: #333;
+    flex: 1;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  
+  /* Status Badge */
+  .detailspage-status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  
+  .detailspage-status-pending {
+    background-color: #fff8e1;
+    color: #ffa000;
+  }
+  
+  .detailspage-status-responded {
+    background-color: #e8f5e9;
+    color: #4caf50;
+  }
+  
+  .detailspage-status-rejected {
+    background-color: #ffebee;
+    color: #e53935;
+  }
+  
+  /* Long Text Content */
+  .detailspage-long-text {
+    background-color: white;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    margin-top: 5px;
+    white-space: pre-wrap;
+    line-height: 1.6;
+  }
+  
+  /* Action Buttons */
+  .detailspage-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+  }
+  
+  .detailspage-button {
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    border: none;
+  }
+  
+  .detailspage-button:hover {
+    transform: translateY(-1px);
+  }
+  
+  .detailspage-button-primary {
+    background-color: #4caf50;
+    color: white;
+    box-shadow: 0 2px 4px rgba(76, 175, 80, 0.2);
+  }
+  
+  .detailspage-button-primary:hover {
+    background-color: #45a049;
+    box-shadow: 0 3px 6px rgba(76, 175, 80, 0.3);
+  }
+  
+  .detailspage-button-secondary {
+    background-color: #f5f5f5;
+    color: #555;
+    border: 1px solid #ddd;
+  }
+  
+  .detailspage-button-secondary:hover {
+    background-color: #eeeeee;
+  }
+  
+  .detailspage-button-danger {
+    background-color: #f44336;
+    color: white;
+    box-shadow: 0 2px 4px rgba(244, 67, 54, 0.2);
+  }
+  
+  .detailspage-button-danger:hover {
+    background-color: #e53935;
+    box-shadow: 0 3px 6px rgba(244, 67, 54, 0.3);
+  }
+  
+  /* Metadata Section */
+  .detailspage-metadata {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #777;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+  }
+  
+  .detailspage-metadata-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .detailspage-container {
+      margin: 10px;
+      padding: 15px;
+    }
+  
+    .detailspage-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .detailspage-field {
+      flex-direction: column;
+    }
+  
+    .detailspage-field-label {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  
+    .detailspage-actions {
+      flex-direction: column;
+    }
+  
+    .detailspage-button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  

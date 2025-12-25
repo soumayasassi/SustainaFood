@@ -1,0 +1,261 @@
+/* General container styling */
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Page Title */
+  .title {
+    color: #228b22;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Donation Card */
+  .donation-card-listrequestsdonation {
+    background: #f8f9fa;
+    border-left: 4px solid #228b22;
+
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .donation-card-listrequestsdonation:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Profile Info */
+  .profile-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .dropdown-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #228b22;
+  }
+  
+  .profile-info p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Products List (Now using Flexbox) */
+  .product-list-listrequestsdonation {
+    list-style: none;
+    padding: 0;
+    display: flex; /* FLEXBOX */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+  
+  /* Product Item - Now Using Flex */
+/* Products List - Aligned & Compact */
+.product-list-listrequestsdonation {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack items */
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  /* Product Item - Now More Structured */
+  .product-item-listrequestsdonation {
+    background: #ffffff;
+    padding: 10px;
+    border-left: 3px solid #228b22;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+  }
+  
+  /* Product Details */
+  .product-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .product-details span {
+    display: block;
+    font-size: 13px;
+    color: #333;
+  }
+  
+  /* Quantity Highlighted */
+  .product-quantity {
+    font-size: 16px;
+    font-weight: bold;
+    color: #d9534f; /* Rouge pour attirer l'attention */
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .product-item-listrequestsdonation {
+      flex-direction: column; /* Stack on small screens */
+      align-items: flex-start;
+    }
+  
+    .product-quantity {
+      font-size: 14px;
+      padding: 6px;
+    }
+  }
+  
+  
+  .product-item-listrequestsdonation span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    padding: 5px 0;
+  }
+  
+  /* Button Container */
+  .button-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+  }
+  
+  .accept-btn, .reject-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .accept-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .accept-btn:hover {
+    background-color: #218838;
+  }
+  
+  .reject-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .reject-btn:hover {
+    background-color: #c82333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .donation-card {
+      padding: 15px;
+    }
+  
+    /* Stack product items in one column on small screens */
+    .product-item {
+      width: 100%;
+    }
+  
+    .profile-info {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  .search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 8px;
+    border-radius: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    margin: 0 auto 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .search-container:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .search-icon {
+    color: #555;
+    margin-right: 8px;
+  }
+  
+  .search-input-requests {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    padding: 8px;
+    background: transparent;
+  }
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    cursor: pointer;
+    background: white;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .select:hover {
+    border-color: #228b22;
+    transform: scale(1.05);
+  }
+  
+  .filter-checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .filter-icon {
+    margin-right: 8px;
+  }
+  
+  .filter-checkbox input {
+    margin-right: 5px;
+  }
+  .content-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }

@@ -1,0 +1,95 @@
+.request-detail-container {
+  display: flex;
+}
+
+.request-detail-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* 🎴 Styled Card */
+.request-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 128, 0, 0.2); /* 💚 Green Glow */
+  padding: 20px;
+  margin: 50px auto;
+  border-left: 6px solid #228b22; /* 💚 Green Accent */
+}
+
+.request-header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #228b22; /* 💚 Green Title */
+}
+
+/* 🧍 Recipient Info */
+.recipient-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.profile-img-details {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #228b22; /* 💚 Green Border */
+}
+
+.recipient-text h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.recipient-text .role {
+  color: #228b22;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* ℹ️ General Details */
+.request-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-item {
+  padding: 10px;
+  background: #f8f8f8;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* 📦 Product Cards */
+.products-section {
+  margin-top: 20px;
+}
+
+.products-grid {
+  display: grid;
+
+  gap: 15px;
+  margin-top: 15px;
+
+}
+
+.product-card-details {
+  background: #e6ffe6; /* 🍀 Light Green */
+  padding: 12px;
+  border-radius: 8px;
+  gap: 25px;
+
+  text-align: center;
+  display: flex;
+  box-shadow: 0 3px 8px rgba(0, 128, 0, 0.2);
+  border-left: 4px solid #228b22;
+  background-color: #fff;
+}

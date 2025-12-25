@@ -1,0 +1,252 @@
+/* Refined Sidebar Styling - Classy Edition with Prefixes */
+
+:root {
+    --primary-green: #8dc73f;
+    --primary-green-dark: #71a63f;
+    --sidebar-bg: #519116;
+    --white: #ffffff;
+    --light-hover: rgba(255, 255, 255, 0.15);
+    --active-item: rgba(255, 255, 255, 0.2);
+    --sidebar-width: 250px;
+    --transition-speed: 0.2s;
+  }
+  
+  /* Style de base de la sidebar */
+  .admin-sidebar {
+    background: var(--sidebar-bg);
+    color: var(--white);
+    width: var(--sidebar-width);
+    min-height: 100vh;
+    padding: 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  /* Sidebar header with logo */
+  .admin-sidebar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* Logo container with enhanced styling */
+  .admin-sidebar-logo-container {
+    position: relative;
+    margin-bottom: 12px;
+  }
+  
+  /* Appliquer un cercle au logo avec effet élégant */
+  .admin-sidebar-logo {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+  }
+  
+  /* Subtle glow effect on hover */
+  .admin-sidebar-logo:hover {
+    border-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+  }
+  
+  /* Decorative circle behind logo */
+  .admin-sidebar-logo-container::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    z-index: -1;
+  }
+  
+  /* Titre de la sidebar */
+  .admin-sidebar h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 3px 0;
+    color: var(--white);
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Subtitle for admin */
+  .admin-sidebar-subtitle {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Liens de la sidebar */
+  .admin-sidebar nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+  }
+  
+  .admin-sidebar a,
+  .admin-sidebar .admin-sidebar-dropdown button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    margin: 3px 0;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--white);
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    border-radius: 6px;
+  }
+  
+  /* Hover effect */
+  .admin-sidebar a:hover,
+  .admin-sidebar .admin-sidebar-dropdown button:hover {
+    background: var(--light-hover);
+  }
+  
+  /* Active state */
+  .admin-sidebar a.active {
+    background: var(--active-item);
+    font-weight: 600;
+  }
+  
+  /* Icônes de la sidebar */
+  .admin-sidebar .icon {
+    font-size: 18px;
+    min-width: 20px;
+    transition: transform 0.2s ease;
+  }
+  
+  /* Subtle icon animation on hover */
+  .admin-sidebar a:hover .icon,
+  .admin-sidebar .admin-sidebar-dropdown button:hover .icon {
+    transform: translateX(2px);
+  }
+  
+  /* Dropdown menu */
+  .admin-sidebar-dropdown-content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    margin-left: 5px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Sous-menu Recipients & Donors */
+  .admin-sidebar-sub-dropdown {
+    background: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 14px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    border-radius: 6px;
+  }
+  
+  .admin-sidebar-sub-dropdown:hover {
+    background: var(--light-hover);
+  }
+  
+  /* Contenu du sous-menu Recipients & Donors */
+  .admin-sidebar-sub-dropdown-content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    list-style-type: none;
+    margin: 0;
+  }
+  
+  .admin-sidebar-sub-dropdown-content a {
+    padding: 8px 15px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .admin-sidebar-sub-dropdown-content a:hover {
+    background: var(--light-hover);
+  }
+  
+  .admin-sidebar-sub-dropdown-content a.active {
+    background: var(--active-item);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .admin-sidebar {
+      width: 60px;
+      overflow: hidden;
+    }
+  
+    .admin-sidebar:hover {
+      width: var(--sidebar-width);
+    }
+  
+    .admin-sidebar h2,
+    .admin-sidebar-subtitle,
+    .admin-sidebar a span,
+    .admin-sidebar .admin-sidebar-dropdown button span {
+      display: none;
+    }
+  
+    .admin-sidebar:hover h2,
+    .admin-sidebar:hover .admin-sidebar-subtitle,
+    .admin-sidebar:hover a span,
+    .admin-sidebar:hover .admin-sidebar-dropdown button span {
+      display: inline;
+    }
+  
+    .admin-sidebar-header {
+      padding: 15px 0;
+    }
+  
+    .admin-sidebar:hover .admin-sidebar-header {
+      padding: 25px 15px 20px;
+    }
+  
+    .admin-sidebar-logo {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 0;
+    }
+  
+    .admin-sidebar:hover .admin-sidebar-logo {
+      width: 65px;
+      height: 65px;
+      margin-bottom: 12px;
+    }
+  
+    .admin-sidebar a,
+    .admin-sidebar .admin-sidebar-dropdown button {
+      justify-content: center;
+      padding: 15px 0;
+    }
+  
+    .admin-sidebar:hover a,
+    .admin-sidebar:hover .admin-sidebar-dropdown button {
+      justify-content: flex-start;
+      padding: 12px 15px;
+    }
+  }
+  

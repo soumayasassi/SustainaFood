@@ -1,0 +1,159 @@
+.continueinfo-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  .continueinfo-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .continueinfo-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .continueinfo-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .continueinfo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .continueinfo-form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .continueinfo-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .continueinfo-input,
+  .continueinfo-select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .continueinfo-input:focus,
+  .continueinfo-select:focus {
+    outline: none;
+    border-color: #8dc73f;
+  }
+  
+  .continueinfo-input-error {
+    border-color: #e74c3c;
+  }
+  
+  .continueinfo-file-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .continueinfo-file-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    background-color: #8dc73f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .continueinfo-camera-icon {
+    font-size: 18px;
+  }
+  
+  .continueinfo-hidden-input {
+    display: none;
+  }
+  
+  .continueinfo-image-preview {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .continueinfo-file-name {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .continueinfo-recaptcha {
+    margin-top: 20px;
+  }
+  
+  .continueinfo-error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .continueinfo-error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .continueinfo-submit-button {
+    padding: 12px;
+    background-color: #8dc73f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .continueinfo-submit-button:hover {
+    background-color: #7ab62f;
+  }
+  
+  @media (max-width: 768px) {
+    .continueinfo-card {
+      padding: 20px;
+    }
+  
+    .continueinfo-title {
+      font-size: 20px;
+    }
+  
+    .continueinfo-description {
+      font-size: 14px;
+    }
+  
+    .continueinfo-input,
+    .continueinfo-select,
+    .continueinfo-submit-button {
+      font-size: 14px;
+    }
+  }
+  
+  

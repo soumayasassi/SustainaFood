@@ -1,0 +1,127 @@
+.location-picker-delevery {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.address-search-delevery {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.signup-input-delevery {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 300px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.search-button-delevery {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.geolocation-button-delevery {
+  padding: 10px;
+  background-color: #2196F3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.map-container-delevery {
+  width: 100%;
+  height: 100%;
+}
+
+.location-picker-buttons-delevery {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.confirm-button-delevery {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.cancel-button-delevery {
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.route-info-popup {
+  max-width: 350px;
+}
+
+.route-info-content {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+.route-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.route-label {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.route-color {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.total-duration {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-weight: bold;
+  margin: 8px 0;
+}

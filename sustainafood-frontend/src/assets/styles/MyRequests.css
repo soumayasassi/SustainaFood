@@ -1,0 +1,138 @@
+/* 🟢 Style général */
+.myrequests-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 🟢 Ajoute un espace sous le Navbar */
+.myrequests-content {
+    padding: 20px;
+    padding-top: 20px; /* Espace sous le navbar */
+    flex-grow: 1;
+}
+
+/* 🟢 Style du titre */
+.myrequests-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* 🟢 Style du tableau */
+.myrequests-list {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1400px;
+    margin-top: 20px;
+    overflow-x: auto; /* Scroll horizontal sur petits écrans */
+}
+
+/* 🟢 Style du tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 🟢 Statuts colorés */
+.status {
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.status.pending {
+    background-color: #ffcc00;
+    color: #333;
+}
+
+.status.approved {
+    background-color: #28a745;
+    color: white;
+}
+
+.status.rejected {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* 🟢 Style des boutons */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.action-buttons button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.edit-btn {
+    color: #007bff;
+}
+
+.save-btn {
+    color: #28a745;
+}
+
+.delete-btn {
+    color: #dc3545;
+}
+
+.action-buttons button:hover {
+    color: black;
+}
+
+/* 🟢 Input d'édition */
+.edit-input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* 🟢 Responsive */
+@media (max-width: 768px) {
+    .myrequests-content {
+        margin-left: 0;
+        padding: 10px;
+        padding-top: 60px;
+    }
+
+    .myrequests-list {
+        padding: 10px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+

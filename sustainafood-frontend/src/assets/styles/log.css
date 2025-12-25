@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+  box-sizing: border-box;
+}
+
+.signup-body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.signup-body::before {
+  content: '';
+  background-image: url('../images/welcomeback.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.signup-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.signup-h1 {
+  font-weight: bold;
+}
+
+.signup-h2 {
+  text-align: center;
+}
+
+.signup-p {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+}
+
+.signup-span {
+  font-size: 12px;
+}
+
+.signup-a {
+  color: #333;
+  font-size: 12px;
+  text-decoration: none;
+  margin-left: 160px;
+}
+
+.signup-button {
+  border-radius: 2px;
+  border: 1px solid #8dc73f;
+  background-color: #8dc73f;
+  color: #000000;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.signup-button:active {
+  transform: scale(0.95);
+}
+
+.signup-button:focus {
+  outline: none;
+}
+
+.signup-button .ghost {
+  background-color: #FFFFFF;
+  border-color: black;
+}
+
+.signup-form {
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+}
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.signup-input {
+  background-color: #eee;
+  border: none;
+  color: black;
+  padding: 12px 15px;
+  margin: 4px 0;
+  width: 100%;
+}
+
+.auth-eye-icon {
+  transform: translateX(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 400px;
+  margin-top: -33px;
+}
+
+
+.signup-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  position: relative;
+  overflow: hidden;
+  width: 1088px;
+  max-width: 100%;
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.signup-sign-in-container {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.signup-container.right-panel-active .signup-sign-in-container {
+  transform: translateX(100%);
+}
+
+.signup-sign-up-container {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.signup-container.right-panel-active .signup-sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: signup-show 0.6s;
+}
+
+@keyframes signup-show {
+  0%, 49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  50%, 100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
+.signup-overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.signup-container.right-panel-active .signup-overlay-container {
+  transform: translateX(-100%);
+}
+
+.signup-overlay {
+  background: #79ba7d;
+  background: -webkit-linear-gradient(to right, #8dc73f, #8eb73f);
+  background: linear-gradient(to right, #8dc73f, #8eb73f);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: #FFFFFF;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.signup-container.right-panel-active .signup-overlay {
+  transform: translateX(50%);
+}
+
+.signup-overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.signup-overlay-left {
+  transform: translateX(-20%);
+}
+
+.signup-container.right-panel-active .signup-overlay-left {
+  transform: translateX(0);
+}
+
+.signup-logo {
+  max-width: 350px;
+  margin-bottom: 5px;
+}
+
+.signup-overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.signup-container.right-panel-active .signup-overlay-right {
+  transform: translateX(20%);
+}
+
+.signup-social-container {
+  margin: 10px 0;
+}
+
+.signup-social-container a {
+  border: 1px solid #DDDDDD;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
+}
+
+.signup-social-container img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.aa{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110%;
+  margin: 40px;
+}
+/* From Uiverse.io by kyle1dev */ 
+.checkbox-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 16px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
+
+.ios-checkbox {
+  --checkbox-size: 15px;
+  
+
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ios-checkbox input {
+  display: none;
+}
+
+.checkbox-wrapper {
+  position: relative;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.checkbox-bg {
+  position: absolute;
+  inset: 0;
+  
+  border-radius: 5px;
+  border: 2px solid var(--checkbox-border);
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.checkbox-icon {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  
+  width: 80%;
+  height: 80%;
+  color: white;
+  transform: scale(0);
+  transition: all 0.2s ease;
+}
+
+.check-path {
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  transition: stroke-dashoffset 0.3s ease 0.1s;
+}
+
+/* Checked State */
+.ios-checkbox input:checked + .checkbox-wrapper .checkbox-bg {
+  background: var(--checkbox-color);
+  border-color: var(--checkbox-color);
+}
+
+.ios-checkbox input:checked + .checkbox-wrapper .checkbox-icon {
+  transform: scale(1);
+}
+
+.ios-checkbox input:checked + .checkbox-wrapper .check-path {
+  stroke-dashoffset: 0;
+}
+
+/* Hover Effects */
+.ios-checkbox:hover .checkbox-wrapper {
+  transform: scale(1.05);
+}
+
+/* Active Animation */
+.ios-checkbox:active .checkbox-wrapper {
+  transform: scale(0.95);
+}
+
+/* Focus Styles */
+.ios-checkbox input:focus + .checkbox-wrapper .checkbox-bg {
+  box-shadow: 0 0 0 4px var(--checkbox-bg);
+}
+
+
+
+.ios-checkbox.green {
+  --checkbox-color: #8dc73f ;
+  --checkbox-bg: #d1fae5;
+  --checkbox-border: #8dc73f ;
+  margin-left: -10px;
+  
+}
+
+
+/* Animation */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.ios-checkbox input:checked + .checkbox-wrapper {
+  animation: bounce 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.signbtn{
+  margin-top: 10px;
+  font-size: 12px;
+  padding:  5px 10px; 
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  width: 100px;
+  height: 40px;
+  font-size: 15px;
+}

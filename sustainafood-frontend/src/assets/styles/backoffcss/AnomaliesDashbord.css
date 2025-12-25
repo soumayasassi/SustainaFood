@@ -1,0 +1,56 @@
+
+  .anomalies-section {
+    margin-top: 20px;
+  }
+  
+  .anomalies-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .anomalies-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .anomalies-table th,
+  .anomalies-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .anomalies-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .anomalies-table td {
+    vertical-align: middle;
+  }
+  
+  .approve-btn,
+  .reject-btn {
+    padding: 6px 12px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .approve-btn {
+    background-color: #28a745; /* Vert */
+  }
+  
+  .reject-btn {
+    background-color: #dc3545; /* Rouge */
+  }
+  
+  .approve-btn:hover {
+    background-color: #218838;
+  }
+  
+  .reject-btn:hover {
+    background-color: #c82333;
+  }

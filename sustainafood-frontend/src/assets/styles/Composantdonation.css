@@ -1,0 +1,489 @@
+
+.donation-details {
+  font-family: "Poppins", sans-serif;
+  background: #f0f8f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  }
+  
+  .donation-card-content-details {
+    width: 100%;
+    max-width: 900px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+
+  }
+  .donation-card-content-details::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(34, 139, 34, 0.1);
+    z-index: 0;
+
+  }
+  
+  .donation-title {
+    margin-top: 0;
+    color: #228b22;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .donation-ul {
+    padding-left: 0;
+    list-style-type: none;
+    margin-bottom: 10px;
+  }
+  
+  .donation-li-list {
+    background: #dcebda83;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Card footer with button */
+  .donation-card-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 20%);
+  }
+  
+  .btnseemorelist,
+  .btnseelist {
+    height: 35px;
+    font-size: 15px;
+    padding: 5px 20px;
+    background-color: #228b22;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btnseemorelist:hover,
+  .btnseelist:hover {
+    background-color: #1a6b1a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Status colors */
+  .status.available {
+    color: #228b22;
+    font-weight: bold;
+  }
+  
+  .status.pending {
+    color: #ffa500;
+    font-weight: bold;
+    background-color: #fff3cd;
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+  
+  .status.reserved {
+    color: #ff4500;
+    font-weight: bold;
+  }
+  
+  /* Product icon */
+  .product-icon {
+    margin-right: 5px;
+  }
+  
+  .donation-cardlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .donation-card-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 975px;
+  }
+  
+  .donation-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .donation-ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .donation-li-list {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .donation-li-list strong {
+    color: #228b22;
+
+  }
+  
+  /* Buttons */
+  button {
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Specific Buttons */
+  .btnseelist {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #28a745;
+    color: white;
+    margin-top: 10px;
+  }
+  
+  .btnseelist:hover {
+    background-color: #218838;
+  }
+  
+  /* Action Icons */
+  .fa-trash {
+    color: #c30010;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .fa-trash:hover {
+    color: red;
+  }
+  
+  .fa-edit {
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+ 
+  
+  .fa-save {
+    color: green;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .fa-save:hover {
+    color: #28a745;
+  }
+  
+  .fa-times {
+    color: red;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 10px;
+  }
+  
+  .fa-times:hover {
+    color: darkred;
+  }
+  
+  /* Input Fields */
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  /* Product Edit Section */
+  .donation-card-content ul li {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .donation-card-content ul li input {
+    flex: 1;
+    min-width: 100px;
+  }
+  
+  /* Add Product Button */
+  button[onClick="handleAddProduct"] {
+    background-color: #228b22;
+    
+    color: white;
+  }
+  
+  button[onClick="handleAddProduct"]:hover {
+    background-color: #228b22;
+  }
+  
+  /* Loader */
+  div[children="Loading..."] {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-top: 20px;
+  }
+  .donation-cardlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  
+  .donation-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .donation-ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .donation-li-list {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .donation-li-list strong {
+    color: #228b22;
+  }
+  
+  /* 🛠 BUTTON STYLES */
+  button {
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* 🟢 General Hover Effect */
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* ✅ Edit Button */
+  .edit-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .edit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* 💾 Save Button */
+  .save-btn {
+    background-color: green;
+    color: white;
+  }
+  
+  .save-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* ❌ Delete Button */
+  .delete-btn {
+    background-color: #c30010;
+    color: white;
+  }
+  
+  .delete-btn:hover {
+    background-color: red;
+  }
+  
+  /* ➕ Add Request Button */
+  .add-request-btn {
+    background-color: #ff9800;
+    color: white;
+  }
+  
+  .add-request-btn:hover {
+    background-color: #e68900;
+  }
+  
+  /* 🔙 Go Back Button */
+  .go-back-btn {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .go-back-btn:hover {
+    background-color: #5a6268;
+  }
+  
+  /* 👀 View Request Button */
+  .view-request-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .view-request-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* ➕ Add Product Button */
+  .add-product-btn {
+    background-color: #228b22;
+    color: white;
+    display: inline-block;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 30px;  
+  margin-right: 10px;}
+  
+  .add-product-btn:hover {
+    background-color: #1e571e;
+  }
+  
+  /* 🛑 Hide View Request When Editing */
+  .hide {
+    display: none;
+  }
+  
+  /* Icons (Edit, Save, Delete) */
+  
+  .fa-times {
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  
+  /* 🔥 Animation when hovering over icons */
+  .fa-trash:hover {
+    color: red;
+    transform: scale(1.2);
+  }
+  
+
+  .fa-save:hover {
+    color: green;
+    transform: scale(1.2);
+  }
+  
+  .fa-times:hover {
+    color: darkred;
+    transform: scale(1.2);
+  }
+  
+  /* Input Fields */
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+
+  .donation-card-content ul li input {
+    flex: 1;
+    min-width: 100px;
+  }
+  
+  /* Loader */
+  div[children="Loading..."] {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-top: 20px;
+  }
+  /* 🔧 Fixing Edit & Delete Icons */
+.icon-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icons */
+  margin-top: 10px; /* Add spacing from other elements */
+}
+
+/* 🎨 Icons Styling */
+
+
+/* ❌ Delete Icon */
+.fa-trash {
+  color: red;
+}
+
+.fa-trash:hover {
+  color: darkred;
+  transform: scale(1.2);
+}
+
+/* ✏️ Edit Icon */
+.fa-edit {
+  color: #218838;
+
+}
+
+.fa-edit:hover {
+  color: black;
+  transform: scale(1.2);
+}

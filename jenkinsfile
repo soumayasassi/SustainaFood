@@ -1,0 +1,123 @@
+pipeline {
+    // Agent doit avoir Docker installé ET l'utilisateur Jenkins doit avoir les permissions Docker
+    // Et l'outil NodeJS 'NodeJS-20' doit être configuré dans Jenkins -> Global Tool Configuration
+    agent any 
+
+    tools {
+        // === AJOUTÉ : S'assurer que Node 20 est utilisé ===
+        nodejs 'NodeJS-20' // Assurez-vous que ce nom correspond à votre config Jenkins
+    }
+    environment {
+        // === AJOUTÉ : Configurer le PATH pour Node 20 ===
+        PATH = "${tool 'NodeJS-20'}/bin:${env.PATH}"
+        // === AJOUTÉ : Variables pour Docker MongoDB ===
+        MONGO_HOSTNAME = 'mongo-test-instance' 
+        MONGO_DB_NAME = 'testdb' 
+    }
+
+    stages {
+
+        stage('Install Dependencies') {
+            steps {
+                script {
+                    sh 'node --version' // Vérifier la version
+                    sh 'npm --version'
+                    dir('sustainafood-backend') {
+                        sh 'npm install'
+                    }
+                    dir('sustainafood-frontend') {
+                        sh 'npm install' 
+                    }
+                }
+            }
+        }
+
+        // === ÉTAPE MODIFIÉE : Exécuter les tests avec Docker pour MongoDB ===
+        stage('Run Backend Tests with Dockerized MongoDB') {
+            steps {
+                script {
+                    // Construire l'URI MongoDB en utilisant les variables d'environnement
+                    def mongoUri = "mongodb://${env.MONGO_HOSTNAME}:27017/${env.MONGO_DB_NAME}" 
+
+                    echo "Tentative de démarrage du conteneur MongoDB (${env.MONGO_HOSTNAME})"
+                    // Démarrer le conteneur MongoDB en arrière-plan (-d) avec un nom spécifique
+                    docker.image('mongo:latest').withRun("--name ${env.MONGO_HOSTNAME} -d") { mongoContainer ->
+                        echo "Conteneur MongoDB (${mongoContainer.id}) démarré. Attente de l'initialisation..."
+                        sleep(15) // Attente simple
+
+                        try {
+                            echo "Exécution des tests dans un conteneur Node.js, connexion à ${mongoUri}"
+                            // Exécuter les commandes de test DANS un conteneur Node.js lié au conteneur Mongo
+                            docker.image('node:20').inside("--link ${env.MONGO_HOSTNAME}:${env.MONGO_HOSTNAME}") {
+                                
+                                sh 'node --version' // Vérifier Node dans le conteneur
+                                dir('sustainafood-backend') {
+                                    
+                                    echo 'Exécution des tests backend...'
+                                    // Passer l'URI via withEnv. 
+                                    // === IMPORTANT : Pas de catchError ici, l'échec du test DOIT faire échouer le pipeline ===
+                                    withEnv(["MONGO_URI=${mongoUri}"]) {
+                                        // Lancer TOUS les tests avec une seule commande (plus efficace)
+                                        sh 'npx jest --detectOpenHandles --forceExit --runInBand --testTimeout=100000' 
+                                        // --runInBand est souvent plus stable dans les environnements CI
+                                    }
+                                    echo 'Tests backend terminés dans le conteneur Node.js.'
+                                } 
+                            } // Conteneur Node arrêté/supprimé
+                        } finally {
+                            // Le nettoyage principal se fait dans post { always }
+                            echo "Bloc de test terminé."
+                        }
+                    } // Conteneur MongoDB arrêté/supprimé (sauf si erreur grave)
+                } 
+            } 
+        } 
+
+        // === SUPPRIMÉ : Étape 'Check Test Results' inutile si les tests échouent directement ===
+
+        stage('Build Application') {
+            steps {
+                script {
+                     sh 'node --version' // Vérifier Node 20
+                    // Backend build (optionnel)
+                    dir('sustainafood-backend') {
+                        echo 'Building backend...'
+                        // sh 'npm run build' 
+                        echo 'Backend build completed.'
+                    }
+
+                    // Frontend build
+                    dir('sustainafood-frontend') {
+                        echo 'Building frontend...'
+                        // === SUPPRIMÉ : Installations redondantes de Font Awesome ===
+                        
+                        // === IMPORTANT : Pas de catchError ici, l'échec du build DOIT faire échouer le pipeline ===
+                        sh 'npm run build'
+                        echo 'Frontend build completed.'
+                    }
+                }
+            }
+        }
+        
+        // === SUPPRIMÉ : Étape 'Check Build Results' inutile si le build échoue directement ===
+
+    } // fin stages
+
+    post {
+        always {
+            // === AJOUTÉ : Nettoyage fiable du conteneur Docker MongoDB ===
+            echo "Nettoyage post-build : Arrêt/Suppression du conteneur ${env.MONGO_HOSTNAME}"
+            sh(script: "docker stop ${env.MONGO_HOSTNAME} || true", returnStatus: true) // Ne pas échouer si déjà arrêté
+            sh(script: "docker rm ${env.MONGO_HOSTNAME} || true", returnStatus: true) // Ne pas échouer si déjà supprimé
+            
+            echo "Pipeline terminé. Résultat: ${currentBuild.result}"
+        }
+        failure {
+            echo "Le pipeline a échoué."
+            // Envoyer une notification si configuré
+        }
+        success {
+             echo "Le pipeline a réussi."
+        }
+    } // fin post
+}
