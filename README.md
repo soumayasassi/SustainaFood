@@ -3,11 +3,6 @@
   <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHkwMjF5Zm9naDU2MWl5dXRwMzhzNDdoejBhbmJoYXowZTJyejllcCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/a7kYlAGwDBffXZKosw/giphy.gif" alt="Java Animation" width="100%">
 </p>
 
-# 🌍 SustainaFood: Revolutionizing Food Redistribution
-
-📧 Contact: sustainafood.team@gmail.com  
-🌐 [GitHub Repository](https://github.com/FouzriChayma/SustainaFood)
-
 ---
 
 ## 🥖 A Feast of Waste in a Hungry World
@@ -207,7 +202,7 @@ Please follow our Code of Conduct and ensure your code follows our standards.
 
 ## 👥 Dev Dreamers Team
 
-Made with ❤️ by 4th-year engineering students at Esprit:
+Made by 4th-year engineering students at Esprit:
 
 - Ben Rebah Mouna  
 - Satouri Tassnime  
@@ -220,13 +215,6 @@ Made with ❤️ by 4th-year engineering students at Esprit:
 ## 📜 License
 
 This project is licensed under the MIT License. See the LICENSE file.
-
----
-
-## 📬 Contact
-
-📧 Email: sustainafood.team@gmail.com  
-🐛 GitHub Issues: Report issues here
 
 ---
 
